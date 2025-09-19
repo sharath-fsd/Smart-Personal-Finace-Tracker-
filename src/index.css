@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 217 45% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 217 45% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 217 45% 11%;
+
+    --primary: 150 69% 69%;
+    --primary-foreground: 217 45% 11%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: 217 33% 45%;
+
+    --accent: 203 93% 61%;
+    --accent-foreground: 217 45% 11%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 96%;
+    --ring: 150 69% 69%;
+
+    /* Financial App Colors */
+    --finance-blue: 217 33% 17%;
+    --finance-blue-light: 203 93% 61%;
+    --success: 150 69% 69%;
+    --success-light: 150 69% 80%;
+    --warning: 25 95% 53%;
+    --warning-light: 38 92% 50%;
+    --expense: 0 84% 60%;
+    --income: 150 69% 69%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(150 69% 69%), hsl(150 69% 80%));
+    --gradient-success: linear-gradient(135deg, hsl(150 69% 69%), hsl(150 69% 80%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.95), hsl(210 20% 98% / 0.8));
+    
+    /* Shadows */
+    --shadow-soft: 0 1px 3px 0 hsl(217 33% 17% / 0.1), 0 1px 2px 0 hsl(217 33% 17% / 0.06);
+    --shadow-medium: 0 4px 6px -1px hsl(217 33% 17% / 0.1), 0 2px 4px -1px hsl(217 33% 17% / 0.06);
+    --shadow-large: 0 10px 15px -3px hsl(217 33% 17% / 0.1), 0 4px 6px -2px hsl(217 33% 17% / 0.05);
+    --shadow-finance: 0 8px 25px -5px hsl(150 69% 69% / 0.15);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 217 33% 17%;
+    --foreground: 210 20% 98%;
+
+    --card: 217 33% 22%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 217 33% 22%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 150 69% 69%;
+    --primary-foreground: 217 45% 11%;
+
+    --secondary: 217 33% 25%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 217 33% 25%;
+    --muted-foreground: 210 20% 75%;
+
+    --accent: 203 93% 61%;
+    --accent-foreground: 217 45% 11%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 30%;
+    --input: 217 33% 25%;
+    --ring: 150 69% 69%;
+    
+    /* Dark mode financial colors */
+    --finance-blue: 217 33% 30%;
+    --finance-blue-light: 203 93% 61%;
+    --success: 150 69% 69%;
+    --success-light: 150 69% 80%;
+    
+    /* Dark mode gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(150 69% 69%), hsl(150 69% 80%));
+    --gradient-success: linear-gradient(135deg, hsl(150 69% 69%), hsl(150 69% 80%));
+    --gradient-card: linear-gradient(145deg, hsl(217 33% 22% / 0.95), hsl(217 33% 25% / 0.8));
+    
+    /* Dark mode shadows */
+    --shadow-soft: 0 1px 3px 0 hsl(0 0% 0% / 0.3), 0 1px 2px 0 hsl(0 0% 0% / 0.2);
+    --shadow-medium: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -1px hsl(0 0% 0% / 0.2);
+    --shadow-large: 0 10px 15px -3px hsl(0 0% 0% / 0.3), 0 4px 6px -2px hsl(0 0% 0% / 0.2);
+    --shadow-finance: 0 8px 25px -5px hsl(0 0% 0% / 0.25);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
