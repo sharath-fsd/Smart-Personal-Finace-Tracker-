@@ -31,3 +31,5 @@ npm install
 
 # 4. Start the development server
 npm run dev
+
+this mostly used in the food delivery partner 
