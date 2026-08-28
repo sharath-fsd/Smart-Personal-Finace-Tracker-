@@ -32,4 +32,6 @@ npm install
 # 4. Start the development server
 npm run dev
 
-this mostly used in the food delivery partner 
+this mostly used in the food delivery partner
+
+This can be only one thing to do is conect
